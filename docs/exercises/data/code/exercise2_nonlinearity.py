@@ -159,6 +159,21 @@ def quadratic_rule(points: np.ndarray) -> np.ndarray:
     return (np.sum(points ** 2, axis=1) - THRESHOLD ** 2 > 0).astype(int)
 
 
+def projection_gaps(points: np.ndarray, labels: np.ndarray, n_directions: int = 6):
+    """Where the two classes land when projected on random unit directions w.
+
+    A hyperplane classifies by thresholding w.x, so if both classes project to the
+    same place along *every* direction there is no threshold left to pick. This is
+    descriptive geometry - no direction is optimised and nothing is trained.
+    """
+    directions = rng.standard_normal((n_directions, N_FEATURES))
+    directions /= np.linalg.norm(directions, axis=1, keepdims=True)
+    projected = points @ directions.T
+    inner = projected[labels == 0].mean(axis=0)
+    outer = projected[labels == 1].mean(axis=0)
+    return inner, outer, np.abs(inner - outer)
+
+
 if __name__ == "__main__":
     print("=" * 78)
     print("EXERCISE 2 - NON-LINEARITY IN HIGHER DIMENSIONS")
@@ -193,6 +208,17 @@ if __name__ == "__main__":
         outer_min = radii[key][labels == 1].min()
         overlap = "OVERLAP" if inner_max > outer_min else "DISJOINT"
         print(f"      radius ranges are {overlap} (inner max {inner_max:.4f} vs outer min {outer_min:.4f})")
+
+    print("\n[D] projection of both classes onto 6 random unit directions w")
+    print("    (mean of w.x per class, and the gap between them)")
+    for key, (points, labels) in DATASETS.items():
+        inner, outer, gap = projection_gaps(points, labels)
+        first, second = NAMES[key]
+        print(f"  Dataset {key}:")
+        print(f"      {first:<16} mean w.x = {np.round(inner, 4).tolist()}")
+        print(f"      {second:<16} mean w.x = {np.round(outer, 4).tolist()}")
+        print(f"      {'|gap|':<16}          = {np.round(gap, 4).tolist()}"
+              f"  (largest {gap.max():.4f})")
 
     print("\n[D] the quadratic rule f(x) = ||x||^2 - 3.5^2 on each dataset")
     for key, (points, labels) in DATASETS.items():
