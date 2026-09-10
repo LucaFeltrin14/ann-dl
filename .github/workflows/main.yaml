@@ -1,8 +1,11 @@
 name: ci
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main          # the deploy job below already guards on main; filtering the
+                      # trigger too keeps work branches from queueing empty runs
+  pull_request:
 
 # Environment
 env:
