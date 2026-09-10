@@ -1,44 +1,51 @@
-## Setup
+# Artificial Neural Networks and Deep Learning — Insper, 2026.2
 
-Para utilizar o código deste repositório, siga as instruções a seguir:
+Portfolio repository for the **Artificial Neural Networks and Deep Learning** course at Insper
+(2026.2), by **Luca Santana Feltrin**.
 
-Crie um ambiente virtual do Python:
+📄 **Published site:** <https://lucafeltrin14.github.io/ann-dl/>
 
-``` shell
-python3 -m venv env
+Every deliverable of the course lives in this single repository and is published as a GitHub Pages
+site by the workflow in [`.github/workflows/main.yaml`](.github/workflows/main.yaml) on every push
+to `main`.
+
+## Layout
+
+```
+docs/
+  index.md                          landing page
+  exercises/
+    data/
+      index.md                      the report
+      code/                         the scripts that were actually run
+      figures/                      the figures the report shows
+mkdocs.yml
+requirements.txt
 ```
 
-Ative o ambiente virtual (**você deve fazer isso sempre que for executar algum script deste repositório**):
+## Running the code
 
-``` shell
-source ./env/bin/activate
+```shell
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt --upgrade
+
+python docs/exercises/data/code/exercise1_point_clouds.py
+python docs/exercises/data/code/exercise2_nonlinearity.py
+python docs/exercises/data/code/exercise3_spaceship_titanic.py
 ```
 
-Instale as dependências com:
+Every script fixes `numpy.random.default_rng(42)`, prints all reported numbers to stdout and writes
+its figures into the matching `figures/` folder, so every value in a report can be reproduced from a
+clean checkout.
 
-``` shell
-python3 -m pip install -r requirements.txt --upgrade
-```
+## Serving the site locally
 
-## Deployment
-
-O material utiliza o [mkdocs](https://www.mkdocs.org/) para gerar a documentação. Para visualizar a documentação, execute o comando:
-
-``` shell
+```shell
 mkdocs serve -o
 ```
 
-Para subir ao GitHub Pages, execute o comando:
+---
 
-``` shell
-mkdocs gh-deploy
-```
-
-
-## Notebooks
-
-Para subir notebooks no mkdocs, podemos utilizar a biblioteca do [mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter).
-
-Instalação, utilização e exemplos podem ser vistos na [documentação oficial](https://github.com/danielfrg/mkdocs-jupyter).
-
-O arquivo `mkdocs.yml` tem anotações nos nós modificados de exemplo.
+Based on the course [documentation template](https://github.com/hsandmann/documentation.template)
+by Sandmann, H.

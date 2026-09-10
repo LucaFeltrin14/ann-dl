@@ -1,5 +1,9 @@
 site/
 env/
+.venv/
 .cache/
 .vscode/
 target/
+__pycache__/
+*.pyc
+.DS_Store

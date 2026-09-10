@@ -1,8 +1,9 @@
 name: ci
+
 on:
   - push
   - pull_request
-  
+
 # Environment
 env:
   CI: true
@@ -10,25 +11,31 @@ env:
 
 # Jobs to run
 jobs:
-     
+
   # Build and deploy documentation site
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
 
-      # Checkout source form GitHub
+      # Checkout source from GitHub (full history: git-revision-date-localized needs it)
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Install Python runtime and dependencies
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
 
       # pip
-      - run: |
-          pip install -r requirements.txt
-          
+      - run: pip install -r requirements.txt
+
+      # build (fails the job on any warning: broken link, missing snippet or figure)
+      - run: mkdocs build --strict
+
       # deploy
-      - run: |
-          mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force
