@@ -34,6 +34,13 @@ imputation, encoding and scaling. **No model is trained anywhere in this activit
 "classification" below is a fixed geometric rule (nearest centre, or a threshold on the radius),
 computed and reported, never fitted.
 
+## AI collaboration
+
+As declared in this page's front matter: Claude (Anthropic) was used to write the data-generation
+and preprocessing scripts and to draft this report. Every number below is produced by the committed
+code and printed by it at run time — nothing here was written by hand into the text without the
+script backing it. I reviewed the code and the analysis and can explain every step.
+
 ---
 
 ## Exercise 1
@@ -503,12 +510,3 @@ on the activation curve.
 | 11 | Mean and median of `FoodCourt` on the training set, before transforming | mean **452.61**, median **0.00** |
 | 12 | Final shape of the training feature matrix | **(6954, 17)** |
 | 13 | Minimum and maximum of the training and test sets after scaling | train **[−1.0000, 1.0000]**; test **[−1.0000, 1.1383]** |
-
----
-
-## AI collaboration
-
-As declared in this page's front matter: Claude (Anthropic) was used to write the data-generation
-and preprocessing scripts and to draft this report. Every number above is produced by the committed
-code and printed by it at run time — nothing here was written by hand into the text without the
-script backing it. I reviewed the code and the analysis and can explain every step.
