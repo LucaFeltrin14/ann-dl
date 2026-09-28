@@ -19,6 +19,10 @@ docs/
       index.md                      the report
       code/                         the scripts that were actually run
       figures/                      the figures the report shows
+    perceptron/
+      index.md                      the report
+      code/                         the perceptron and the scripts that were actually run
+      figures/                      the figures the report shows
 mkdocs.yml
 requirements.txt
 ```
@@ -33,6 +37,9 @@ python -m pip install -r requirements.txt --upgrade
 python docs/exercises/data/code/exercise1_point_clouds.py
 python docs/exercises/data/code/exercise2_nonlinearity.py
 python docs/exercises/data/code/exercise3_spaceship_titanic.py
+
+python docs/exercises/perceptron/code/exercise1_separable.py
+python docs/exercises/perceptron/code/exercise2_overlapping.py
 ```
 
 Every script fixes `numpy.random.default_rng(42)`, prints all reported numbers to stdout and writes

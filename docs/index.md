@@ -18,7 +18,7 @@ The repository behind this site is public: [github.com/LucaFeltrin14/ann-dl](htt
 | Exercise | Due | Status |
 |---|---|---|
 | [Data](exercises/data/index.md) — data preparation and analysis for neural networks | Sep 10 | ✅ delivered |
-| Perceptron | Sep 22 | — |
+| [Perceptron](exercises/perceptron/index.md) — training a perceptron from scratch, on separable and overlapping data | Sep 22 | ✅ delivered |
 | MLP | Oct 13 | — |
 | VAE | Oct 22 | — |
 
@@ -33,6 +33,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt --upgrade
 python docs/exercises/data/code/exercise1_point_clouds.py
+python docs/exercises/perceptron/code/exercise1_separable.py
 ```
 
 ## Course links
