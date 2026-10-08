@@ -1,0 +1,4 @@
+feature,lower_fence,upper_fence,flagged,flagged_pct
+age,-26.5,113.5,0,0
+avg_glucose_level,21.985,169.525,503,12.30430528
+bmi,9.35,47.35,90,2.201565558

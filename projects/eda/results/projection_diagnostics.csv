@@ -1,0 +1,6 @@
+method,parameter,trustworthiness,kl_divergence
+pca,2,0.8256722194,
+tsne,30,0.9729886237,0.835898757
+tsne,50,0.9768900965,0.8491359949
+umap,15,0.9671914678,
+umap,50,0.9725047232,

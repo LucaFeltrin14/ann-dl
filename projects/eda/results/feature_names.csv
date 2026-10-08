@@ -1,0 +1,25 @@
+feature
+num__age
+num__avg_glucose_level
+num__bmi
+bmi_missing__missingindicator_bmi
+cat__gender_Female
+cat__gender_Male
+cat__gender_Other
+cat__hypertension_0
+cat__hypertension_1
+cat__heart_disease_0
+cat__heart_disease_1
+cat__ever_married_No
+cat__ever_married_Yes
+cat__work_type_Govt_job
+cat__work_type_Never_worked
+cat__work_type_Private
+cat__work_type_Self-employed
+cat__work_type_children
+cat__Residence_type_Rural
+cat__Residence_type_Urban
+cat__smoking_status_Unknown
+cat__smoking_status_formerly smoked
+cat__smoking_status_never smoked
+cat__smoking_status_smokes
