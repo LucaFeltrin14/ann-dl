@@ -1,0 +1,21 @@
+feature,category,count,pct,cardinality,rare
+gender,Female,2395,58.58610568,3,False
+gender,Male,1692,41.38943249,3,False
+gender,Other,1,0.02446183953,3,True
+hypertension,0,3691,90.28864971,2,False
+hypertension,1,397,9.711350294,2,False
+heart_disease,0,3867,94.59393346,2,False
+heart_disease,1,221,5.406066536,2,False
+ever_married,No,1388,33.95303327,2,False
+ever_married,Yes,2700,66.04696673,2,False
+work_type,Govt_job,522,12.76908023,5,False
+work_type,Never_worked,13,0.3180039139,5,True
+work_type,Private,2332,57.04500978,5,False
+work_type,Self-employed,667,16.31604697,5,False
+work_type,children,554,13.5518591,5,False
+Residence_type,Rural,2019,49.38845401,2,False
+Residence_type,Urban,2069,50.61154599,2,False
+smoking_status,Unknown,1247,30.50391389,4,False
+smoking_status,formerly smoked,714,17.46575342,4,False
+smoking_status,never smoked,1501,36.71722114,4,False
+smoking_status,smokes,626,15.31311155,4,False

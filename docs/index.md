@@ -22,6 +22,12 @@ The repository behind this site is public: [github.com/LucaFeltrin14/ann-dl](htt
 | MLP | Oct 13 | — |
 | VAE | Oct 22 | — |
 
+## Projects
+
+| Project | Due | Team |
+|---|---|---|
+| [EDA — Stroke Prediction](projects/eda/index.md) | Oct 08 | Luca Santana Feltrin, Eduardo Takei Yaginuma, Gabriel Fernando Missaka Mendes |
+
 ## How to reproduce
 
 Everything here is reproducible from a clean checkout. Each exercise ships its scripts under
@@ -34,6 +40,8 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt --upgrade
 python docs/exercises/data/code/exercise1_point_clouds.py
 python docs/exercises/perceptron/code/exercise1_separable.py
+python docs/projects/eda/code/eda.py
+python docs/projects/eda/code/verify.py
 ```
 
 ## Course links

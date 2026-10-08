@@ -23,6 +23,13 @@ docs/
       index.md                      the report
       code/                         the perceptron and the scripts that were actually run
       figures/                      the figures the report shows
+  projects/
+    eda/
+      index.md                      the English EDA report
+      code/                         importable pipeline, analysis and verification
+      code/data/                    original Stroke Prediction CSV
+      figures/                      12 numbered figures
+      results/                      computed tables, split IDs and projection coordinates
 mkdocs.yml
 requirements.txt
 ```
@@ -45,6 +52,23 @@ python docs/exercises/perceptron/code/exercise2_overlapping.py
 Every script fixes `numpy.random.default_rng(42)`, prints all reported numbers to stdout and writes
 its figures into the matching `figures/` folder, so every value in a report can be reproduced from a
 clean checkout.
+
+## EDA project
+
+Team: **Luca Santana Feltrin, Eduardo Takei Yaginuma, Gabriel Fernando Missaka Mendes**.
+The approved dataset is [Stroke Prediction](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset).
+The [report](docs/projects/eda/index.md) includes every rubric item, all 10 summary rows and an explicit AI-use declaration.
+No predictive model is trained in this deliverable.
+
+```shell
+python docs/projects/eda/code/eda.py
+python docs/projects/eda/code/verify.py
+mkdocs build --strict
+```
+
+The EDA command regenerates the report, figures and numeric artifacts using only training data
+after the fixed stratified split. The audit independently checks the numbers and pipeline isolation.
+The source CSV is bundled, so these commands require no Kaggle login or dataset download.
 
 ## Serving the site locally
 

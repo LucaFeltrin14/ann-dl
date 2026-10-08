@@ -1,0 +1,4 @@
+feature,imputation_median,scaler_center,scaler_iqr
+age,45,45,35
+avg_glucose_level,91.945,91.945,36.885
+bmi,28,28,9

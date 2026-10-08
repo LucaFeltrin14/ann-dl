@@ -1,0 +1,4 @@
+feature1,feature2,n,spearman
+age,avg_glucose_level,4088,0.1408988334
+age,bmi,3918,0.380916822
+avg_glucose_level,bmi,3918,0.112639183

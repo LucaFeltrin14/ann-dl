@@ -1,0 +1,89 @@
+{
+  "categorical_feature_count": 7,
+  "checks": {
+    "age_outside_0_120": 0,
+    "children_work_type_age_18_or_more": 0,
+    "constant_features": [],
+    "duplicate_full_rows": 0,
+    "duplicate_ids": 0,
+    "duplicate_rows_without_id": 0,
+    "invalid_binary_flags": 0,
+    "invalid_categories": 0,
+    "married_under_18": 0,
+    "nonpositive_glucose": 0,
+    "nonpositive_observed_bmi": 0,
+    "smokes_under_18": 9
+  },
+  "dataset_sha256": "644d473b05d2797006bd94865e4f8bb057f0c721617911613c82c8fcfc707420",
+  "missing_bmi_by_target_train": {
+    "0": 3.419902288506043,
+    "1": 18.592964824120603
+  },
+  "numeric_feature_count": 3,
+  "outlier_flagged_rows": 569,
+  "outlier_rows_removed": 0,
+  "outlier_values_clipped": 0,
+  "pca_components_90": 10,
+  "pca_pc1_pc2": 0.46647551025108447,
+  "projection_diagnostics": [
+    {
+      "method": "pca",
+      "parameter": 2,
+      "trustworthiness": 0.825672219400711
+    },
+    {
+      "kl_divergence": 0.835898756980896,
+      "method": "tsne",
+      "parameter": 30,
+      "trustworthiness": 0.9729886236668359
+    },
+    {
+      "kl_divergence": 0.8491359949111938,
+      "method": "tsne",
+      "parameter": 50,
+      "trustworthiness": 0.976890096495683
+    },
+    {
+      "method": "umap",
+      "parameter": 15,
+      "trustworthiness": 0.967191467750127
+    },
+    {
+      "method": "umap",
+      "parameter": 50,
+      "trustworthiness": 0.9725047232097511
+    }
+  ],
+  "python": "3.11.9",
+  "raw_shape": [
+    5110,
+    12
+  ],
+  "seed": 42,
+  "strongest_pair": {
+    "feature1": "age",
+    "feature2": "bmi",
+    "n": 3918,
+    "spearman": 0.3809168219983647
+  },
+  "test_shape": [
+    1022,
+    24
+  ],
+  "train_shape": [
+    4088,
+    24
+  ],
+  "transformed_nan_test": 0,
+  "transformed_nan_train": 0,
+  "versions": {
+    "matplotlib": "3.11.2",
+    "numba": "0.68.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "seaborn": "0.13.2",
+    "umap-learn": "0.5.12"
+  }
+}

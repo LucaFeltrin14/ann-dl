@@ -1,0 +1,13 @@
+column,missing_count,missing_pct,train_missing_count,train_missing_pct,unique_nonmissing
+id,0,0,0,0,5110
+gender,0,0,0,0,3
+age,0,0,0,0,104
+hypertension,0,0,0,0,2
+heart_disease,0,0,0,0,2
+ever_married,0,0,0,0,2
+work_type,0,0,0,0,5
+Residence_type,0,0,0,0,2
+avg_glucose_level,0,0,0,0,3979
+bmi,201,3.933463796,170,4.15851272,418
+smoking_status,0,0,0,0,4
+stroke,0,0,0,0,2

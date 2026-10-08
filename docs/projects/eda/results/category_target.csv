@@ -1,0 +1,21 @@
+feature,category,n,stroke,no_stroke,stroke_pct
+gender,Female,2395,112,2283,4.676409186
+gender,Male,1692,87,1605,5.141843972
+gender,Other,1,0,1,0
+hypertension,0,3691,145,3546,3.928474668
+hypertension,1,397,54,343,13.60201511
+heart_disease,0,3867,163,3704,4.215153866
+heart_disease,1,221,36,185,16.28959276
+ever_married,No,1388,23,1365,1.657060519
+ever_married,Yes,2700,176,2524,6.518518519
+work_type,Govt_job,522,28,494,5.363984674
+work_type,Never_worked,13,0,13,0
+work_type,Private,2332,115,2217,4.931389365
+work_type,Self-employed,667,55,612,8.245877061
+work_type,children,554,1,553,0.1805054152
+Residence_type,Rural,2019,91,1928,4.507181773
+Residence_type,Urban,2069,108,1961,5.219913001
+smoking_status,Unknown,1247,38,1209,3.047313553
+smoking_status,formerly smoked,714,56,658,7.843137255
+smoking_status,never smoked,1501,71,1430,4.73017988
+smoking_status,smokes,626,34,592,5.431309904

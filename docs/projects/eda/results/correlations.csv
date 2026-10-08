@@ -1,0 +1,4 @@
+feature,age,avg_glucose_level,bmi
+age,1,0.1408988334,0.380916822
+avg_glucose_level,0.1408988334,1,0.112639183
+bmi,0.380916822,0.112639183,1

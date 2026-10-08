@@ -37,8 +37,17 @@ jobs:
       # pip
       - run: pip install -r requirements.txt
 
+      # Verify the EDA artifact numbers and train-only preprocessing contract.
+      - run: python docs/projects/eda/code/verify.py
+
       # build (fails the job on any warning: broken link, missing snippet or figure)
       - run: mkdocs build --strict
+
+      # Use the repository owner identity for the generated Pages commit too.
+      - name: Configure publication identity
+        run: |
+          git config user.name "Luca Feltrin"
+          git config user.email "luca.feltrin2005@gmail.com"
 
       # deploy
       - run: mkdocs gh-deploy --force
