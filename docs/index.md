@@ -18,15 +18,15 @@ The repository behind this site is public: [github.com/LucaFeltrin14/ann-dl](htt
 | Exercise | Due | Status |
 |---|---|---|
 | [Data](exercises/data/index.md) — data preparation and analysis for neural networks | Sep 10 | ✅ delivered |
-| [Perceptron](exercises/perceptron/index.md) — training a perceptron from scratch, on separable and overlapping data | Sep 22 | ✅ delivered |
-| MLP | Oct 13 | — |
-| VAE | Oct 22 | — |
+| [Perceptron](exercises/perceptron/index.md) — training a perceptron from scratch, on separable and overlapping data | Oct 18 | ✅ delivered |
+| [MLP](exercises/mlp/index.md) — backpropagation by hand, then an MLP from scratch for binary and multi-class data, and a depth comparison | Oct 25 | ✅ delivered |
+| VAE | Nov 01 | — |
 
 ## Projects
 
 | Project | Due | Team |
 |---|---|---|
-| [EDA — Stroke Prediction](projects/eda/index.md) | Oct 08 | Luca Santana Feltrin, Eduardo Takei Yaginuma, Gabriel Fernando Missaka Mendes |
+| [EDA — Stroke Prediction](projects/eda/index.md) | Oct 25 | Luca Santana Feltrin, Eduardo Takei Yaginuma, Gabriel Fernando Missaka Mendes |
 
 ## How to reproduce
 
@@ -40,6 +40,7 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt --upgrade
 python docs/exercises/data/code/exercise1_point_clouds.py
 python docs/exercises/perceptron/code/exercise1_separable.py
+python docs/exercises/mlp/code/exercise2_binary.py
 python docs/projects/eda/code/eda.py
 python docs/projects/eda/code/verify.py
 ```

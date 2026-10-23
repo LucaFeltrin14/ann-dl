@@ -109,5 +109,6 @@ nav:
   - Exercises:
     - Data: exercises/data/index.md
     - Perceptron: exercises/perceptron/index.md
+    - MLP: exercises/mlp/index.md
   - Projects:
     - EDA — Stroke Prediction: projects/eda/index.md

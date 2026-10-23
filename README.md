@@ -23,6 +23,10 @@ docs/
       index.md                      the report
       code/                         the perceptron and the scripts that were actually run
       figures/                      the figures the report shows
+    mlp/
+      index.md                      the report
+      code/                         the MLP, the scripts that were actually run and the checks
+      figures/                      the figures the report shows
   projects/
     eda/
       index.md                      the English EDA report
@@ -47,6 +51,11 @@ python docs/exercises/data/code/exercise3_spaceship_titanic.py
 
 python docs/exercises/perceptron/code/exercise1_separable.py
 python docs/exercises/perceptron/code/exercise2_overlapping.py
+
+python docs/exercises/mlp/code/gradient_check.py
+python docs/exercises/mlp/code/exercise2_binary.py
+python docs/exercises/mlp/code/exercise3_multiclass.py
+python docs/exercises/mlp/code/exercise4_depth.py
 ```
 
 Every script fixes `numpy.random.default_rng(42)`, prints all reported numbers to stdout and writes
